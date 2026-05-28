@@ -4,6 +4,7 @@ import {
   useId,
   useRef,
   useState,
+  type CSSProperties,
   type ReactNode,
   type PointerEvent as ReactPointerEvent,
 } from 'react'
@@ -90,7 +91,7 @@ export default function Carousel({ sections, children }: CarouselProps) {
     }
   }
 
-  const trackStyle: React.CSSProperties = {
+  const trackStyle: CSSProperties = {
     transform: `translate3d(calc(${-index * 100}% + ${dragOffset}px), 0, 0)`,
     transition: dragOffset === 0 ? 'transform 520ms cubic-bezier(0.22, 1, 0.36, 1)' : 'none',
   }
