@@ -5,6 +5,19 @@
 :root {
   color-scheme: light;
   --grain-opacity: 0.04;
+  /* Reserved space at the bottom of every slide so the floating nav pill
+     and the keyboard-hint chip never overlap content. */
+  --slide-bottom-safe: 6.5rem;
+  /* Reserved space at the top of every slide so the floating brand header
+     never overlaps content. */
+  --slide-top-safe: 5rem;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --slide-bottom-safe: 7.5rem;
+    --slide-top-safe: 6rem;
+  }
 }
 
 html,
@@ -55,7 +68,10 @@ body {
   gap: 1.25rem;
   height: 100%;
   width: 100%;
-  padding: clamp(1.25rem, 3.5vw, 3rem);
+  padding-left: clamp(1.25rem, 3.5vw, 3rem);
+  padding-right: clamp(1.25rem, 3.5vw, 3rem);
+  padding-top: var(--slide-top-safe);
+  padding-bottom: var(--slide-bottom-safe);
 }
 
 .eyebrow {

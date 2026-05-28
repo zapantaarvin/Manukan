@@ -20,43 +20,49 @@ export default function Home() {
       />
 
       <div className="relative h-full w-full overflow-y-auto scrollbar-thin">
-        <div className="mx-auto flex min-h-full max-w-6xl flex-col justify-center px-6 sm:px-10 pt-24 sm:pt-28 pb-28 gap-8">
-          <div className="space-y-5">
+        <div
+          className="mx-auto flex min-h-full max-w-6xl flex-col justify-center gap-6 px-6 sm:px-10"
+          style={{
+            paddingTop: 'var(--slide-top-safe)',
+            paddingBottom: 'var(--slide-bottom-safe)',
+          }}
+        >
+          <div className="space-y-4">
             <div className="inline-flex items-center gap-2 rounded-full bg-moss-50/10 border border-moss-50/20 px-3 py-1.5 text-xs uppercase tracking-[0.18em] text-moss-100">
               <span className="h-1.5 w-1.5 rounded-full bg-clay-300" aria-hidden="true" />
               A sanitation-first business plan
             </div>
-            <h1 className="font-display font-semibold leading-[0.95] tracking-tight text-balance text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
+            <h1 className="font-display font-semibold leading-[0.95] tracking-tight text-balance text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
               Manukan.
               <span className="block text-clay-200/95">
                 Clean poultry, <em className="not-italic font-normal text-moss-100">raised next door.</em>
               </span>
             </h1>
-            <p className="max-w-2xl text-base sm:text-lg leading-relaxed text-moss-100/90">
+            <p className="max-w-2xl text-sm sm:text-base lg:text-lg leading-relaxed text-moss-100/90">
               A neighbor-first broiler pilot for Barangay Santa Monica, Santa Rita,
               Pampanga. Start small, run clean, scale only after the system is proven.
             </p>
           </div>
 
           <div className="grid gap-3 sm:grid-cols-3">
-            <div className="rounded-2xl border border-moss-50/15 bg-moss-50/5 backdrop-blur p-4 sm:p-5">
+            <div className="rounded-2xl border border-moss-50/15 bg-moss-50/5 backdrop-blur p-3 sm:p-4">
               <div className="text-[11px] uppercase tracking-widest text-clay-200">Pilot size</div>
-              <div className="font-display text-3xl sm:text-4xl font-semibold mt-1">500</div>
-              <div className="text-sm text-moss-100/85">birds — first cycle, all-in / all-out</div>
+              <div className="font-display text-2xl sm:text-3xl font-semibold mt-1">500</div>
+              <div className="text-xs sm:text-sm text-moss-100/85">birds — first cycle, all-in / all-out</div>
             </div>
-            <div className="rounded-2xl border border-moss-50/15 bg-moss-50/5 backdrop-blur p-4 sm:p-5">
+            <div className="rounded-2xl border border-moss-50/15 bg-moss-50/5 backdrop-blur p-3 sm:p-4">
               <div className="text-[11px] uppercase tracking-widest text-clay-200">Preferred buffer</div>
-              <div className="font-display text-3xl sm:text-4xl font-semibold mt-1">200 m</div>
-              <div className="text-sm text-moss-100/85">from any home, school, church, or food business</div>
+              <div className="font-display text-2xl sm:text-3xl font-semibold mt-1">200 m</div>
+              <div className="text-xs sm:text-sm text-moss-100/85">from any home, school, church, or food business</div>
             </div>
-            <div className="rounded-2xl border border-moss-50/15 bg-moss-50/5 backdrop-blur p-4 sm:p-5">
+            <div className="rounded-2xl border border-moss-50/15 bg-moss-50/5 backdrop-blur p-3 sm:p-4">
               <div className="text-[11px] uppercase tracking-widest text-clay-200">Hard no-go</div>
-              <div className="font-display text-3xl sm:text-4xl font-semibold mt-1">&lt; 100 m</div>
-              <div className="text-sm text-moss-100/85">to neighbors — we stop the project, not the neighbors’ peace</div>
+              <div className="font-display text-2xl sm:text-3xl font-semibold mt-1">&lt; 100 m</div>
+              <div className="text-xs sm:text-sm text-moss-100/85">to neighbors — we stop the project, not the neighbors’ peace</div>
             </div>
           </div>
 
-          <div className="rounded-2xl border border-clay-200/30 bg-gradient-to-r from-moss-900/40 to-moss-800/40 p-5 sm:p-6">
+          <div className="rounded-2xl border border-clay-200/30 bg-gradient-to-r from-moss-900/40 to-moss-800/40 p-4 sm:p-5">
             <div className="flex flex-col sm:flex-row sm:items-start gap-4">
               <div className="shrink-0 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-clay-300/20 text-clay-200">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
@@ -66,10 +72,10 @@ export default function Home() {
                 </svg>
               </div>
               <div>
-                <div className="font-display text-xl font-semibold text-clay-100">
+                <div className="font-display text-lg sm:text-xl font-semibold text-clay-100">
                   Our governing principle
                 </div>
-                <p className="mt-1 text-moss-50/90 leading-relaxed text-balance">
+                <p className="mt-1 text-sm sm:text-base text-moss-50/90 leading-relaxed text-balance">
                   If the site cannot keep birds, manure, mortality handling, and dirty
                   water away from neighbors and waterways, <strong>we do not proceed.</strong>{' '}
                   A poultry business can be profitable. A badly sited one becomes a

@@ -26,7 +26,7 @@ export default function SectionShell({
 }: SectionShellProps) {
   return (
     <div className={`relative h-full w-full overflow-hidden ${bgClass[background]} grain`}>
-      <div className="section-shell mx-auto max-w-7xl pt-20 sm:pt-24 pb-24">
+      <div className="section-shell mx-auto max-w-7xl">
         <header className="space-y-2">
           <div className="eyebrow">{eyebrow}</div>
           <h2 className="section-title">{title}</h2>
