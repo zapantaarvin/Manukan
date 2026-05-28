@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --grain-opacity: 0.04;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  background: #f6f3ec;
+  color: #16201a;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: rgba(44, 79, 52, 0.3);
+    border-radius: 9999px;
+  }
+
+  .grain::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: var(--grain-opacity);
+    mix-blend-mode: multiply;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.5) 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+}
+
+.section-shell {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1.25rem;
+  height: 100%;
+  width: 100%;
+  padding: clamp(1.25rem, 3.5vw, 3rem);
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #386340;
+  font-weight: 600;
+}
+
+.section-title {
+  font-family: 'Fraunces', ui-serif, Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  color: #1e3424;
+  font-size: clamp(1.75rem, 3.4vw, 3rem);
+  text-wrap: balance;
+}
+
+.section-lede {
+  color: #2c4f34;
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  line-height: 1.55;
+  max-width: 62ch;
+}
+
+.card {
+  background: #fdfcf7;
+  border: 1px solid rgba(56, 99, 64, 0.12);
+  border-radius: 14px;
+  box-shadow: 0 10px 40px -18px rgba(20, 40, 25, 0.18);
+  padding: clamp(0.9rem, 1.4vw, 1.25rem);
+}
+
+.card-emerald {
+  background: linear-gradient(180deg, #f3f7f3 0%, #e1ebe1 100%);
+  border: 1px solid rgba(56, 99, 64, 0.18);
+  border-radius: 14px;
+  padding: clamp(0.9rem, 1.4vw, 1.25rem);
+}
+
+.card-clay {
+  background: linear-gradient(180deg, #faf7f2 0%, #f1ead9 100%);
+  border: 1px solid rgba(168, 127, 68, 0.25);
+  border-radius: 14px;
+  padding: clamp(0.9rem, 1.4vw, 1.25rem);
+}
+
+.section-content {
+  overflow-y: auto;
+  padding-right: 0.25rem;
+}
+
+@media (max-width: 640px) {
+  body {
+    overflow: auto;
+  }
+}
